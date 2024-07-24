@@ -1,10 +1,6 @@
 # Linux
 
-- install `.deb` package
-
-```shell
-sudo dpkg -i packagepath
-```
+## General
 
 - recommended to don't install snap on linux!
 - just try download the file from the internet.
@@ -17,6 +13,12 @@ hostname -I
 
 > first ip is your ip in LAN
 
+- how to see the current port usuage:
+
+  ```shell
+  sudo lsof -i -P -n | grep LISTEN
+  ```
+  
 - add `alias` permanently in one command
 
   ```shell
@@ -45,3 +47,9 @@ hostname -I
   - xface ui
     - file manager: thunar
     - pdf reader: xreader
+
+- install `.deb` package
+
+```shell
+sudo dpkg -i packagepath
+```
