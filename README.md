@@ -2,6 +2,15 @@
 
 ## General
 
+### Shell
+
+- `grep` one of the most practical linux commands for filtering:
+  - example:
+
+    ```shell
+    ls | grep <wanted-folder>
+    ```
+
 - recommended to don't install snap on linux!
 - just try download the file from the internet.
 
@@ -39,6 +48,37 @@ hostname -I
     google-chrome
     ```
 
+- see the disk usage of folders and files:
+
+  ```shell
+  df -h <your-path>
+  ```
+
+  - example:
+
+      ```shell
+      df -h /
+      ```
+
+  - or
+
+    ```shell
+    sudo du -h --max-depth=1
+    ```
+  
+- go to terminal before login to linux shortcut:
+  - `ctrl + alt + f2`
+  - for back to graphical:
+    - `ctrl + alt + f1`
+
+### Snap
+
+- installing
+
+```shell
+sudo snap install <your-package>
+```
+
 ## Mint
 
 - mint app names
@@ -53,3 +93,8 @@ hostname -I
 ```shell
 sudo dpkg -i packagepath
 ```
+
+## Centos
+
+- if the root disk usage become 100% your operating system
+does not boot!!!
