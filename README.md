@@ -75,9 +75,15 @@ hostname -I
 
 - installing
 
-```shell
-sudo snap install <your-package>
-```
+  ```shell
+  sudo snap install <your-package>
+  ```
+
+- removing
+
+  ```shell
+  sudo snap remove <your-package>
+  ```
 
 ## Mint
 
