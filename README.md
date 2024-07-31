@@ -69,7 +69,8 @@ hostname -I
 - go to terminal before login to linux shortcut:
   - `ctrl + alt + f2`
   - for back to graphical:
-    - `ctrl + alt + f1`
+    - `ctrl + alt + f1` (centos worked)
+    - `ctrl + alt + f7` (mint worked)
 
 ### Snap
 
