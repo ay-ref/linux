@@ -14,11 +14,17 @@
 - recommended to don't install snap on linux!
 - just try download the file from the internet.
 
+- how to see the hostname
+
+  ```shell
+  hostname
+  ```
+
 - how to see the hostname ip in LAN
 
-```shell
-hostname -I
-```
+  ```shell
+  hostname -I
+  ```
 
 > first ip is your ip in LAN
 
@@ -88,7 +94,7 @@ hostname -I
 
 ## Mint
 
-- mint app names
+- app names
   - cinammon ui
     - file manager: nemo
   - xface ui
@@ -98,10 +104,14 @@ hostname -I
 - install `.deb` package
 
 ```shell
-sudo dpkg -i packagepath
+sudo dpkg -i <packagepath>
 ```
 
 ## Centos
+
+- app names
+  - gnome ui
+    - file manager: nautilus
 
 - if the root disk usage become 100% your operating system
 does not boot!!!
