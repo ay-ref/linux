@@ -26,7 +26,7 @@
   hostname -I
   ```
 
-> first ip is your ip in LAN
+> first ip is your ipv4 in LAN
 
 - how to see the current port usuage:
 
