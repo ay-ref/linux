@@ -231,3 +231,576 @@ navigating to the folder that you want and then use shortcut
 - for linux filesystem type ext4 is recommended because it is very compatible
 
 - end of chapter 3
+
+## Chapter 4 - Graphical Interface
+
+- using linux
+  - graphical user interface - gui
+  - command line interface - cli
+
+- seamless desktop environment
+  - session manager
+  - window manager
+  - a set of utilities
+
+- desktop environments
+  - gnome
+    - most used linux desktop
+    - redhat
+    - fedora
+    - centos
+    - suse linux enterprise
+    - ubuntu
+    - debian
+  - kde
+    - suse
+    - opensuse
+
+- you can change the background almost all linux :)
+
+- locaking desktop shortcuts
+  - `windows + l`
+  - `ctrl + alt + l`
+
+- linux is true multiuser os
+  - you can login with different users in one system
+  - you can switch user with logout and login again
+
+- shutdown
+  - in shutdown your open app data goes out
+  - you can do this with gui easily with finding shutdown icon
+  - you can do this by cli!
+
+    ```shell
+    shutdown now
+    ```
+  
+- suspend
+  - in suspend your app data in ram saved to use again
+  after starting system again
+
+- you can change default application with searching it in settings
+
+- you can change file view in file manager window with
+  - `ctrl + 1`
+  - `ctrl + 2`
+  - `ctrl + 3`
+
+- you can see sorted by selecting the property of file columns at top
+- you can see hidden files with `ctrl + h` shortcut or selecting from view at top  
+- in linux dot started name files and folders are hidden and usually they are configs
+- as default when in file manager you type something it start searching for a file
+- linux opposite to windows has a very powerful search power for finding files!
+and everyone use linux must use it!
+- you can search for a regex pattern in file manager with `ctrl + s`
+
+- `~` means the current client path
+
+- your deleted files (if not permanently deleted) are found in
+  - `~/.local/share/Trash/files`
+
+- delete shortcut
+  - `delete` button
+
+- delete permanently shortcut
+  - `shift + delete` button
+
+> in linux we have directory in root of the system that is `/tmp` the
+> content of this directory deleted after a period of time or policy that is configed
+> in some files.
+
+- every user has a seperate home directory
+
+## Chapter 5 - System Configuration from Graphical User Interface
+
+- NetworkManager is who that contorl your connections to the network
+
+- NetworkManager vpn support
+  - ipsec
+  - cisco connect
+  - microsoft pptp
+  - openvpn
+
+### Packaging
+
+- debian packaging
+  - `dpkg` is package manager name
+  - `apt` is advance package tool
+
+- every program usually have specific and particular distro target
+and usually cannot be used in different os even in the same family :/
+
+- red hat package manager
+  - `rpm`
+  - compatible with
+    - suse/opensuse
+    - centos
+    - oracle linux
+
+- fedora
+  - `dnf`
+  - `yum`
+
+- suse/opensuse
+  - `zypper`
+  - `rpm`
+
+## Chapter 6 - Common Applications  
+
+- web browsers
+  - chrome
+  - firefox (linux default)
+  - chromium
+  - opera
+
+- email application
+  - graphical
+    - thunderbird
+    - claws mail
+    - evolution
+  - cli
+    - mutt
+    - mail
+
+- office application
+  - libre office
+
+- development applicatoin
+  - vscode
+  - eclipse
+  - vim
+
+- sound player
+
+- movie player
+  - vlc
+  - mplayer
+  - xine
+  - totem
+
+- movie editors
+  - cine paint
+  - blender
+  - cinelerra
+  - ffmpeg
+
+- graphic editors
+  - gimp
+
+## Chapter 7 - Command line Operation
+
+- any possible task is doable in cli!
+- you can write scripts for repeative tasks
+- you can sign into remote machine anywhere in the internet
+- you can initiate graphical application directly from cli
+
+### CLI commands
+
+- `cat <file-path>`
+  - show the file text
+  - combine files
+- `head <file-path>`
+  - show first lines of file
+- `tail <file-path>`
+  - show end lines of file
+- `man <command>`
+  - show the manual documentation of the commmand
+- `cd <dir-path>`
+  - change directory
+- `login`
+  - login to user account
+- `exit`
+  - exit terminal
+- `echo <text>`
+  - return text as output
+- `ls`
+  - list files and folders
+- `rmdir <dir-name>`
+  - remove directory
+- `mkdir <dir-name>`
+  - create new directory
+- `touch <file-name>`
+  - create new file
+
+- cli input format
+
+  ```shell
+  <command> <-options> arguments
+  ```
+
+- options formats
+  - `--<option>`
+  - `-<o>`
+
+#### sudo
+
+- setup and running
+  - run `su`
+  - input password
+
+- setup user as root
+
+  ```shell
+  echo "<user> ALL=(ALL) ALL" > /etc/sudoers.d/<user>
+  chmod 440 /etc/sudoers.d/<user>
+  ```
+
+### Utilities
+
+- switching between cli and gui
+
+- virtual terminals
+  - tty1 to tty6
+    - `ctrl + alt + f1` to `ctrl + alt + f6`
+  
+- back to gui
+  - `ctrl + alt + f7`
+
+- stop gui service by one of followings
+
+  ```shell
+  sudo systemctl stop gdm 
+  ```
+
+  ```shell
+  sudo tellinit 3
+  ```
+
+- start gui service by one of followings
+
+  ```shell
+  sudo systemctl start gdm
+  ```
+
+  ```shell
+  sudo tellinit 5
+  ```
+
+- shutdown computer
+
+  ```shell
+  shutdown now
+  ```
+
+- shutdown scheduling!
+  
+  ```shell
+  shutdown -h 10:00
+  ```
+
+### Locating Application
+
+- applications usually are in the below folders
+  - `/bin`
+  - `/usr/bin`
+  - `/sbin`
+  - `/usr/sbin`
+  - `/opt`
+  - `/usr/local/bin`
+  - `/usr/local/sbin`
+  - `/home/<username>/bin`
+
+- locating the application command
+
+  ```shell
+  which <app-name>
+  ```
+
+- locating the application command and its files
+
+  ```shell
+  whereis <app-name>
+  ```
+
+- print your current user directory
+
+  ```shell
+  echo $HOME
+  ```
+
+- see the current working direcotry
+
+  ```shell
+  pwd
+  ```
+  
+- change directory to user root directory
+
+  ```shell
+  cd ~
+  ```
+
+  ```shell
+  cd
+  ```
+
+- change directory to parent directory
+
+  ```shell
+  cd ..
+  ```
+
+- change to previous directory
+
+  ```shell
+  cd -
+  ```
+
+- `pushd` and `popd` are similar to `cd` and `cd -` with stack policy difference
+  
+- 2 different path determining
+  - relative
+    - from everywhere
+  - absolute
+    - from the root
+
+- multiple sequence of slashes are ignored to just one slash
+
+  ```shell
+  ///usr////////bin = /usr/bin
+  ```
+  
+- see the file system very clean way
+  - see the current directory folders structure
+
+    ```shell
+    tree -d
+    ```
+  
+  > `-d` just show directories
+  
+- for see list all of files and folders in directory (even hidden files)
+
+  ```shell
+  ls -a
+  ```
+
+- for see list of files and folders recursively
+
+  ```shell
+  ls -R
+  ```
+
+- for see list of files and folders in directory with line by line format
+
+  ```shell
+  ls -l
+  ```
+
+- for see list all of files and folders with uniqueness
+
+  ```shell
+  ls -i
+  ```
+  
+- go to root directory
+
+  ```shell
+  cd /
+  ```
+  
+### Links
+
+- types of links in linux
+
+  - hard line
+    - `file1` exists
+    - command
+
+      ```shell
+      ln file1 file2
+      ```
+
+    - created `file2` is a link for file1
+    - id of file1 and file2 is same
+  - soft link (symbolic link)
+    - like hard link `ln -s` command
+    - it create new id for file
+    - it is practical for creating the shortcuts in terminal!
+
+- to see the list of directories history
+
+  ```shell
+  dirs
+  ```
+
+### Working with Files
+
+- file count data
+
+  ```shell
+  wc <file-name>
+  ```
+  
+  - output:
+
+    ```shell
+    <lines-count> <words-count> <chars-count>
+    ```
+
+- see the whole content of file
+
+  ```shell
+  cat <file-name>
+  ```
+  
+- see the whole content of file with line numbers
+
+  ```shell
+  cat -n <file-name>
+  ```
+
+- see the whole content of file with pagination
+
+  ```shell
+  less <file-name>
+  ```
+
+  > go to next line with `enter`,
+  > go to next page with `space`,
+  > go out with `q`.
+
+- see the whole content of file with pagination with line numbers
+
+  ```shell
+  less -N <file-name>
+  ```
+
+- see first 10 lines of file
+
+  ```shell
+  head <file-name>
+  ```
+
+- see n first lines of file
+
+  ```shell
+  head -<n> <file-name>
+  ```
+
+> `tail` command show from last of file.
+
+- see the content of the files reverse!!
+
+  ```shell
+  tac <file-name>
+  ```
+  
+- create new file
+
+  ```shell
+  touch <file-name>
+  ```
+
+- create new file
+
+  ```shell
+  echo > <file-name>
+  ```
+
+- create directory
+
+  ```shell
+  mkdir <dirname>
+  ```
+
+- create directory with parents
+
+  ```shell
+  mkdir -p <dirpath>
+  ```
+  
+- delete directory
+
+  ```shell
+  rmdir <dirname>
+  ```
+
+- delete path (everything with path)
+
+  ```shell
+  rm -rf <path>
+  ```
+  
+- moving and renaming file
+
+  ```shell
+  mv <oldpath> <newpath>
+  ```
+  
+- removing file
+
+  ```shell
+  rm <filename>
+  ```
+
+- find the file!!!
+
+  ```shell
+  locate <filenameregex>
+  ```
+
+  ```shell
+  find <path> -name <filenameregex>
+  ```
+
+  - before these command run below command
+
+    ```shell
+    sudo updatedb
+    ```
+
+- filter the output
+
+  ```shell
+  <command> | grep <filter-regex>
+  ```
+
+> in linux `regex` is not exactly what it is, it is called `wildcards`.\\
+> while using the `wildcards` use from quotes(`""`).
+
+---
+
+`find` is very powerfull command in linux and has many options!
+
+---
+  
+### File Streams
+
+- standard
+  - input (stdin)
+  - output (stdout)
+  - error (stderr)
+
+### I/O Redirection
+
+- redirect by stdin
+
+  ```shell
+  <input> < <file-path>
+  ```
+  
+- redirect from stdout
+
+  ```shell
+  <input> > <file-path>
+  ```
+
+- you can pipe commands to give the output of left command to input right command
+
+  ```shell
+  <command> | <command2> | <command3> 
+  ```
+
+  > this is a pipeline :). \\
+  > pipes are very efficient for running commands because they deletes
+  > disk read/write overloads
+  
+### Package Management System
+
+- usually we have 2 types of package manager in linux os
+  - low level like: dpkg, rpm
+  - high level like: apt-get, zypper, yum, dnf
+
+- you can see the list of packages installed on your system
+- you can search for existing packages before installation

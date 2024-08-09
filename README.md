@@ -103,10 +103,22 @@
 
 - install `.deb` package
 
-```shell
-sudo dpkg -i <packagepath>
-```
+  ```shell
+  sudo dpkg -i <packagepath>
+  ```
 
+- for becoming root user
+
+  ```shell
+  sudo su
+  ```
+
+- how to see current user in cli
+
+  ```shell
+  whoami
+  ```
+  
 ## Centos
 
 - app names
