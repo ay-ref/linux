@@ -802,5 +802,65 @@ and usually cannot be used in different os even in the same family :/
   - low level like: dpkg, rpm
   - high level like: apt-get, zypper, yum, dnf
 
-- you can see the list of packages installed on your system
-- you can search for existing packages before installation
+- By Package Management System
+  - you can install new packages
+  - you can remove existing packages
+  - you can see the list of packages installed on your system
+  - you can search for existing packages before installation
+  - you can search in your package management system cache to see what you have
+
+## Chapter 8 - Finding Linux Documentatoin
+
+- linux documentation sources
+  - man pages
+  - gnu info
+  - command help
+  - other documentation
+    - stackoverflow!
+
+### Man Docs
+
+- see the all of existing documentation about a topic in `man`
+
+  ```shell
+  whatis <topicname>
+  ```
+  
+  ```shell
+  man -f <topicname>
+  ```
+  
+- see the all content docs `man`
+
+  ```shell
+  man -a <topicname>
+  ```
+
+- see the related to the topic `man` pages
+
+  ```shell
+  man -k <topicname>
+  ```
+
+### Gnu Info
+
+- see the manual
+
+  ```shell
+  info <topicname>
+  ```
+  
+- after all you can use from `--help` or `-h` to see every command documentation
+
+  ```shell
+  <command> --help
+  ```
+  
+### Other Linux Documentations
+
+- other documentations
+  - desktop help system
+  - package documentatoin
+  - online sources
+
+## Chapter 9 - Processes
