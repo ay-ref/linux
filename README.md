@@ -92,6 +92,43 @@
   sudo snap remove <your-package>
   ```
 
+### Security
+
+#### File Encryption
+
+##### GPG
+
+- generate keys
+
+  ```shell
+  gpg --gen-key
+  ```
+
+- see your keys
+
+  ```shell
+  gpg --list-secret-keys
+  ```
+  
+- export your keys
+
+  ```shell
+  gpg --export-secret-keys [key-id | email] > private_key.asc
+  ```
+  
+- import your keys
+
+  ```shell
+  gpg --import private_key.asc
+  ```
+
+- delete a key
+
+  ```shell
+  gpg --delete-key [KeyID]
+  gpg --delete-secret-key [KeyID]
+  ```
+  
 ## Mint
 
 - app names
