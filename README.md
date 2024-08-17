@@ -96,7 +96,7 @@
 
 #### File Encryption
 
-##### GPG
+##### GPG (GNUPG)
 
 - generate keys
 
@@ -127,6 +127,24 @@
   ```shell
   gpg --delete-key [KeyID]
   gpg --delete-secret-key [KeyID]
+  ```
+
+- symmetric encryption with just passphrase! (***very practical***)
+
+  ```shell
+  gpg -c --no-symkey-cache <filename>
+  ```
+
+- assymetric encryption with pair key
+
+  ```shell
+  gpg -e -r <key-email> <filename>
+  ```
+  
+- now decrypt symmetric
+
+  ```shell
+  gpg -d <filename>.gpg > <filename>
   ```
   
 ## Mint
