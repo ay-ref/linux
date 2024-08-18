@@ -181,4 +181,6 @@
     - file manager: nautilus
 
 - if the root disk usage become 100% your operating system
-does not boot!!!
+does not boot completely!!!
+  - you probably go to your virtual terminal with `ctrl+alt+f2`
+  shortcut to remove some of your data for booting completely!
