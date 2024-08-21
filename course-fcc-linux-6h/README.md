@@ -864,3 +864,156 @@ and usually cannot be used in different os even in the same family :/
   - online sources
 
 ## Chapter 9 - Processes
+
+- process types
+  - interactive processes
+    - ex: bash, firefox, top
+  - batch processes
+    - ex: updatedb, ldconfig
+  - daemons
+    - ex: httpd, sshd, libvirtd
+  - threads
+    - ex: firefox, gnome-terminal-server
+  - kernel threads
+    - ex: kthreadd, migration, ksoftirqd
+
+- process specificatoin
+  - process id (pid)
+  - parent process id (ppid)
+  - thread id (tid)
+
+- terminate a process
+
+  ```shell
+  kill -SIGKILL <pid>
+  ```
+  
+  ```shell
+  kill -9 <pid>
+  ```
+  
+- to see current processes
+
+  ```shell
+  ps -A
+  ```
+  
+  ```shell
+  ps -e
+  ```
+  
+- ids
+  - ruid: user id
+  - rgid: group id
+  - euid: user rights
+  - egid: group rights
+
+- nice is the priority of a task
+
+- you can see the task with nice value
+
+  ```shell
+  ps l
+  ```
+
+- you can change the nice value
+
+  ```shell
+  renice <value> <pid>
+  ```
+
+- you can see the system uptime
+
+  ```shell
+  uptime
+  ```
+
+- you can see complete task manager in terminal
+
+  ```shell
+  top
+  ```
+
+- you can see the process tree!!!
+
+  ```shell
+  pstree
+  ```
+
+- you can sleep terminal with sleep command
+
+  ```shell
+  sleep <amount-time>
+  ```
+
+## Chapter 10 - File Operations
+
+- in linux every thing is a file
+
+- in linux as usual of an os file system is a tree
+
+  ```shell
+  - root
+    - user1
+      - Documents
+      - ...
+    - systemfiles
+      - compilers
+      - ...
+    - devices
+      - printer
+      - ...
+  ```
+  
+- root in linux is `/`
+
+- linux standard pathes
+
+  ```shell
+  - /   (root)
+    - /bin    (user binaries)
+    - /sbin   (system binaryies)
+    - /etc    (configuration files)
+    - /dev    (device files)
+    - /proc   (process information)
+    - /var    (variable files)
+    - /tmp    (temporary files)
+    - /usr    (user programs)
+    - /home   (home directories)
+    - /boot   (boot loader files)
+    - /lib    (system libraries)
+    - /opt    (optional applications)
+    - /mnt    (mount directory)
+    - /media  (removable devices)
+    - /srv    (service data)
+  ```
+  
+- you can see the difference between text files
+
+  ```shell
+  diff <firstfilepath> <secondfilepath>
+  ```
+
+- you can see the difference between binary files
+
+  ```shell
+  cmp <firstfilepath> <secondfilepath>
+  ```
+
+- in linux file extensions like `.txt` is not useful for system
+and just can be useful for users
+
+- in linux you can find the file type
+
+  ```shell
+  file <path>
+  ```
+
+- you can copy files very optimized and just transmitting the changes
+
+  ```shell
+  rsync -r <sourcepath> <destinationpath>
+  ```
+
+  > `<path>` can be in another machine with format `someone@machine:address/to/path`
+  
