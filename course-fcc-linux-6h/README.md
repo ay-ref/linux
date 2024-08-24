@@ -928,6 +928,15 @@ and usually cannot be used in different os even in the same family :/
   uptime
   ```
 
+- what is load average numbers
+  - cpu utilizatoin in
+    - last 1 minutes
+    - last 5 minutes
+    - last 15 minutes
+
+  > if you have multi-core cpu this number is in range of
+  > your cpu count!
+
 - you can see complete task manager in terminal
 
   ```shell
