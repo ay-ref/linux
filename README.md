@@ -11,6 +11,12 @@
     ls | grep <wanted-folder>
     ```
 
+- how to see current user in cli
+
+  ```shell
+  whoami
+  ```
+
 - recommended to don't install snap on linux!
 - just try download the file from the internet.
 
@@ -146,15 +152,25 @@
   ```shell
   gpg -d <filename>.gpg > <filename>
   ```
-  
-## Mint
 
-- app names
-  - cinammon ui
-    - file manager: nemo
-  - xface ui
-    - file manager: thunar
-    - pdf reader: xreader
+## GUI's
+
+### Cinammon
+
+- file manager: nemo
+
+### Xfce 
+
+- file manager: thunar
+- pdf reader: xreader
+
+### Gnome
+
+- file manager: nautilus
+
+## Distros
+
+### Mint
 
 - install `.deb` package
 
@@ -167,18 +183,8 @@
   ```shell
   sudo su
   ```
-
-- how to see current user in cli
-
-  ```shell
-  whoami
-  ```
   
-## Centos
-
-- app names
-  - gnome ui
-    - file manager: nautilus
+### Centos
 
 - if the root disk usage become 100% your operating system
 does not boot completely!!!
