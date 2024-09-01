@@ -77,6 +77,18 @@
     ```shell
     sudo du -h --max-depth=1
     ```
+
+- see the partitions
+
+  ```shell
+  lsblk
+  ```
+
+- go to your flash removable
+
+  ```shell
+  cd /run/<username>/<medianame>
+  ```
   
 - go to terminal before login to linux shortcut:
   - `ctrl + alt + f2`
