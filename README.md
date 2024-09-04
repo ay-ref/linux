@@ -171,7 +171,7 @@
 
 - file manager: nemo
 
-### Xfce 
+### Xfce
 
 - file manager: thunar
 - pdf reader: xreader
@@ -202,3 +202,10 @@
 does not boot completely!!!
   - you probably go to your virtual terminal with `ctrl+alt+f2`
   shortcut to remove some of your data for booting completely!
+
+## Apps and Packages
+
+### ncat
+
+- a package for general-purpose command-line tool for reading, writing, redirecting
+and encrypting data across a network.
