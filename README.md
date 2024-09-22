@@ -4,6 +4,19 @@
 
 ### Shell
 
+- create new file
+
+  ```shell
+  touch <filename>
+  ```
+
+- create a range of files
+  - example:
+
+    ```shell
+    touch myfiles{1..10}.txt
+    ```
+  
 - `grep` one of the most practical linux commands for filtering:
   - example:
 
