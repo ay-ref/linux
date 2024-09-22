@@ -1025,4 +1025,125 @@ and just can be useful for users
   ```
 
   > `<path>` can be in another machine with format `someone@machine:address/to/path`
+
+## Chapter 11 - Text Editors
+
+- text editors
+  - basic
+    - nano
+    - gedit
+  - advanced
+    - vi
+    - emacs
+
+## Chapter 12 - User Environment
+
+- see currently users
+
+  ```shell
+  who
+  ```
+
+- see current terminal user
+
+  ```shell
+  whoami
+  ```
+
+- see your aliases
+
+  ```shell
+  alias
+  ```
+
+- we have many environment variables in linux
+  - to see all of varialbes
+
+    ```shell
+    env
+    ```
+
+  - one example is `$OLDPWD`
+  - we can use them with leading `$`
+  - we can print them with `echo $YOUR_VARIABLE`
+
+- one of most important environment variable is `PATH`
+  - it showes your folders that can access over all system pathes
+
+- linux rwx permissions
+
+![rwx linux permissions](./images/linux-permission.png)
+
+```shell
+drwxrwxrwxrwx
+```
+
+- detail
+  - d: directory, -: file
+  - permissions
+    - r: read
+    - w: write
+    - x: execute
+  - first rwx: u(user)
+  - second rwx: g(group)
+  - third rwx: o(other)
+
+- grant permission example
+
+  ```shell
+  ➜  something touch somefile
+  ➜  something ls -l
+  total 0
+  -rw-rw-r-- 1 abbas abbas 0 Sep 22 21:21 somefile
+  ➜  something chmod uo+x,g-w somefile
+  ➜  something ls -l
+  total 0
+  -rwxr--r-x 1 abbas abbas 0 Sep 22 21:21 somefile
+  ➜  something
+  ```
+
+## Chapter 13 - Manipulating Texts
+
+- useful pipe functions
+  - sort output of prev
+
+    ```shell
+    command | sort
+    ```
   
+  - remove duplications
+
+    ```shell
+    command | uniq
+    ```
+  
+  - see first lines
+
+    ```shell
+    command | head -10
+    ```
+
+  - see last lines
+
+    ```shell
+    command | tail -10
+    ```
+
+  - replacing pattern in file content
+
+    ```shell
+    sed -e s/currentptr/newptr/g filepath
+    ```
+
+    > `-i` is used for in place file change
+
+    - example
+
+      ```shell
+      echo "I hate you" | sed s/hate/love/g
+      ```
+
+> for large files in linux you can easily use from `less` command
+> to navigate in file! ***less is more***
+
+## Chapter 14 - Network Operations
