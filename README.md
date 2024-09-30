@@ -60,19 +60,6 @@
   echo "alias aliasname='aliascommand'" >> ~/.zshrc && source ~/.zshrc
   ```
 
-- open app from cli
-  - firefox
-
-    ```shell
-    firefox
-    ```
-
-  - google chrome
-
-    ```shell
-    google-chrome
-    ```
-
 - see the disk usage of folders and files:
 
   ```shell
@@ -102,6 +89,13 @@
   ```shell
   cd /run/<username>/<medianame>
   ```
+
+- find in file contents
+
+  ```shell
+  grep -rnw yourpath -e "yourregex"
+  ```
+  
   
 - go to terminal before login to linux shortcut:
   - `ctrl + alt + f2`
@@ -222,3 +216,19 @@ does not boot completely!!!
 
 - a package for general-purpose command-line tool for reading, writing, redirecting
 and encrypting data across a network.
+
+### Firefox
+
+- open app
+
+  ```shell
+  firefox
+  ```
+
+### Google Chrome
+
+- open app
+
+  ```shell
+  google-chrome
+  ```
