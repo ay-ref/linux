@@ -181,11 +181,16 @@
 ### Xfce
 
 - file manager: thunar
+- disk usage analyzer: baobab
 - pdf reader: xreader
+- text editor: xed
 
 ### Gnome
 
 - file manager: nautilus
+- disk usage analyzer: baobab
+- pdf reader: xdg-open
+- text editor: gedit
 
 ## Distros
 
