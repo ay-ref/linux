@@ -194,12 +194,32 @@
 
 ## Distros
 
+### Debian
+
+- install `.deb` package
+
+  ```shell
+  sudo dpkg -i <packagepath>
+  ```
+
+- remove `.deb` package
+
+  ```shell
+  sudo dpkg -r <packagepath>
+  ```
+
 ### Mint
 
 - install `.deb` package
 
   ```shell
   sudo dpkg -i <packagepath>
+  ```
+
+- remove `.deb` package
+
+  ```shell
+  sudo dpkg -r <packagepath>
   ```
 
 - for becoming root user
