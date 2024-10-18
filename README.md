@@ -102,6 +102,11 @@
   - for back to graphical:
     - `ctrl + alt + f1` (centos worked)
     - `ctrl + alt + f7` (mint worked)
+   
+- how to run `.jar` file
+  ```shell
+  java -jar yourjarfile.jar
+  ```
 
 ### Snap
 
