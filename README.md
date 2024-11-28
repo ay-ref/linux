@@ -60,19 +60,6 @@
   echo "alias aliasname='aliascommand'" >> ~/.zshrc && source ~/.zshrc
   ```
 
-- open app from cli
-  - firefox
-
-    ```shell
-    firefox
-    ```
-
-  - google chrome
-
-    ```shell
-    google-chrome
-    ```
-
 - see the disk usage of folders and files:
 
   ```shell
@@ -102,12 +89,24 @@
   ```shell
   cd /run/<username>/<medianame>
   ```
+
+- find in file contents
+
+  ```shell
+  grep -rnw yourpath -e "yourregex"
+  ```
+  
   
 - go to terminal before login to linux shortcut:
   - `ctrl + alt + f2`
   - for back to graphical:
     - `ctrl + alt + f1` (centos worked)
     - `ctrl + alt + f7` (mint worked)
+   
+- how to run `.jar` file
+  ```shell
+  java -jar yourjarfile.jar
+  ```
 
 ### Snap
 
@@ -187,13 +186,32 @@
 ### Xfce
 
 - file manager: thunar
+- disk usage analyzer: baobab
 - pdf reader: xreader
+- text editor: xed
 
 ### Gnome
 
 - file manager: nautilus
+- disk usage analyzer: baobab
+- pdf reader: xdg-open
+- text editor: gedit
 
 ## Distros
+
+### Debian
+
+- install `.deb` package
+
+  ```shell
+  sudo dpkg -i <packagepath>
+  ```
+
+- remove `.deb` package
+
+  ```shell
+  sudo dpkg -r <packagepath>
+  ```
 
 ### Mint
 
@@ -201,6 +219,12 @@
 
   ```shell
   sudo dpkg -i <packagepath>
+  ```
+
+- remove `.deb` package
+
+  ```shell
+  sudo dpkg -r <packagepath>
   ```
 
 - for becoming root user
@@ -222,3 +246,19 @@ does not boot completely!!!
 
 - a package for general-purpose command-line tool for reading, writing, redirecting
 and encrypting data across a network.
+
+### Firefox
+
+- open app
+
+  ```shell
+  firefox
+  ```
+
+### Google Chrome
+
+- open app
+
+  ```shell
+  google-chrome
+  ```
