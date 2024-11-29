@@ -24,6 +24,8 @@
     ls | grep <wanted-folder>
     ```
 
+    > you have very very practical flag `-v` that **exclude** files.
+
 - how to see current user in cli
 
   ```shell
@@ -96,14 +98,14 @@
   grep -rnw yourpath -e "yourregex"
   ```
   
-  
 - go to terminal before login to linux shortcut:
   - `ctrl + alt + f2`
   - for back to graphical:
     - `ctrl + alt + f1` (centos worked)
     - `ctrl + alt + f7` (mint worked)
-   
+
 - how to run `.jar` file
+
   ```shell
   java -jar yourjarfile.jar
   ```

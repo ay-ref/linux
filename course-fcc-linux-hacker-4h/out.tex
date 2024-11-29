@@ -1,0 +1,643 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\author{}
+\date{}
+
+\begin{document}
+
+\hypertarget{free-code-camp-course---linux-essentials-for-hackers---4-hours}{%
+\section{Free Code Camp Course - Linux Essentials for Hackers - 4
+hours}\label{free-code-camp-course---linux-essentials-for-hackers---4-hours}}
+
+\begin{itemize}
+\tightlist
+\item
+  linux is imoprtant for
+
+  \begin{itemize}
+  \tightlist
+  \item
+    security
+  \item
+    system administration
+  \item
+    personal use! (I want this :) )
+  \end{itemize}
+\item
+  linux can run on
+
+  \begin{itemize}
+  \tightlist
+  \item
+    virtual machine
+  \item
+    baremetal
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{useful-keyboard-shortcuts}{%
+\subsection{useful keyboard shortcuts}\label{useful-keyboard-shortcuts}}
+
+\begin{itemize}
+\tightlist
+\item
+  open terminal
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{ctrl\ +\ alt\ +\ t}
+  \end{itemize}
+\item
+  move window to top, right, bottom, left
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{window\ +\ arrowkeys}
+  \end{itemize}
+\item
+  increase/decrease font size
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{ctrl\ +\ shift\ +\ "+"}
+  \item
+    \texttt{ctrl\ +\ "-"}
+  \end{itemize}
+\item
+  clear the terminal
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{ctrl\ +\ l}
+  \item
+    \texttt{clear} command
+  \end{itemize}
+\item
+  end the current process
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{ctrl\ +\ c}
+  \end{itemize}
+\item
+  see history commands
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{top\ and\ bottom\ in\ arrowkeys}
+  \end{itemize}
+\item
+  auto complete command
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{tab}
+  \item
+    \texttt{right-arrowkey}
+  \end{itemize}
+\item
+  close the window
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{ctrl\ +\ w}
+  \item
+    \texttt{ctrl\ +\ shift\ +\ w}
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{file-management-and-manipulation}{%
+\subsection{file management and
+manipulation}\label{file-management-and-manipulation}}
+
+\begin{itemize}
+\item
+  print working directory
+
+\begin{verbatim}
+pwd
+\end{verbatim}
+\item
+  list directory
+
+\begin{verbatim}
+ls
+\end{verbatim}
+\item
+  list direcotry in a table
+
+\begin{verbatim}
+ls -l
+\end{verbatim}
+\item
+  list directory also hiddens
+
+\begin{verbatim}
+ls -a
+\end{verbatim}
+\item
+  list direcotry in a table human readable
+
+\begin{verbatim}
+ls -lh
+\end{verbatim}
+\item
+  list direcotry recursively!
+
+\begin{verbatim}
+ls -R
+\end{verbatim}
+\item
+  cahnge directory to home directory
+
+\begin{verbatim}
+cd
+\end{verbatim}
+
+\begin{verbatim}
+cd ~
+\end{verbatim}
+\item
+  change directory to previous directory
+
+\begin{verbatim}
+cd -
+\end{verbatim}
+\item
+  change directory to parent directory
+
+\begin{verbatim}
+cd ..
+\end{verbatim}
+\item
+  change directory to any directory you want
+
+\begin{verbatim}
+cd wanteddirectorypath
+\end{verbatim}
+\item
+  change directory to root directory
+
+\begin{verbatim}
+cd /
+\end{verbatim}
+\item
+  see the one line documentation of a command!!!
+
+\begin{verbatim}
+whatis thecommand
+\end{verbatim}
+\item
+  create new file
+
+\begin{verbatim}
+touch newfilename
+\end{verbatim}
+\item
+  returning a line
+
+\begin{verbatim}
+echo yourlinegoeshere
+\end{verbatim}
+\item
+  redirect output to a file
+
+\begin{verbatim}
+echo "something" > somefile
+\end{verbatim}
+\item
+  see the content of a file
+
+\begin{verbatim}
+cat somefile
+\end{verbatim}
+\item
+  copy content of a file to another file
+
+\begin{verbatim}
+cat somefile > anotherfile
+\end{verbatim}
+\item
+  remove a file or directory
+
+\begin{verbatim}
+rm yourfile
+\end{verbatim}
+
+\begin{verbatim}
+rm -r yourdirectory
+\end{verbatim}
+\item
+  remove all files and folders in a directory
+
+\begin{verbatim}
+rm -r *
+\end{verbatim}
+\item
+  create a directory
+
+\begin{verbatim}
+mkdir yournewdirectoryname
+\end{verbatim}
+\item
+  copy a file to another directory
+
+\begin{verbatim}
+cp yourfilepath yournewdirectory
+\end{verbatim}
+\item
+  copy a directory to another directory
+
+\begin{verbatim}
+cp -r yourfolderpath yournewdirectory
+\end{verbatim}
+\item
+  move a file or folder to new directory
+
+\begin{verbatim}
+mv yourfileorfolderpath yournewdirectory
+\end{verbatim}
+\item
+  rename a file
+
+\begin{verbatim}
+mv yourfileorfolderpath yournewname
+\end{verbatim}
+\item
+  remove a direcotry
+
+\begin{verbatim}
+rmdir yourdirectorypath
+\end{verbatim}
+\item
+  open a file with nano editor
+
+\begin{verbatim}
+nano filepath
+\end{verbatim}
+\item
+  open a file with vim editor
+
+\begin{verbatim}
+vi filepath
+\end{verbatim}
+\end{itemize}
+
+\hypertarget{file-and-directory-permissions}{%
+\subsection{file and directory
+permissions}\label{file-and-directory-permissions}}
+
+\begin{itemize}
+\tightlist
+\item
+  in a file config: \texttt{drwxrwxrwx}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{d} shows directory, \texttt{-} shows file
+  \item
+    \texttt{r} shows read permission
+  \item
+    \texttt{w} shows write permission
+  \item
+    \texttt{x} shows execute permission
+  \item
+    \texttt{-} shows without permission
+  \item
+    first \texttt{rwx} is for owner of file
+  \item
+    second \texttt{rwx} is for group of file
+  \item
+    third \texttt{rwx} is for others of file
+  \end{itemize}
+\item
+  change the permission of file
+\end{itemize}
+
+\begin{verbatim}
+chmod mapuserstopermissions filepath
+\end{verbatim}
+
+\begin{itemize}
+\item
+  map users to permissions
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{ugo}: owner, group, others
+  \item
+    \texttt{rwx}: read, write, execute
+  \item
+    \texttt{=+-}: equal, append, delete
+  \end{itemize}
+\item
+  also you can use from binary to map users to permissions
+\item
+  change the permission of folder
+\end{itemize}
+
+\begin{verbatim}
+chmod -R mapuserstopermissions folderpath
+\end{verbatim}
+
+\hypertarget{file-and-directory-ownership}{%
+\subsection{file and directory
+ownership}\label{file-and-directory-ownership}}
+
+\begin{itemize}
+\item
+  every file has a user and also a group
+\item
+  change the owner of file
+\end{itemize}
+
+\begin{verbatim}
+chown newowner filepath
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  change the group of file
+\end{itemize}
+
+\begin{verbatim}
+chgrp newgroup filepath
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  see the groups
+\end{itemize}
+
+\begin{verbatim}
+groups
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  see the groups of specific user
+\end{itemize}
+
+\begin{verbatim}
+groups username
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  see the current logined users
+\end{itemize}
+
+\begin{verbatim}
+users
+\end{verbatim}
+
+\hypertarget{grep-and-piping}{%
+\subsection{\texorpdfstring{\texttt{grep} and
+piping}{grep and piping}}\label{grep-and-piping}}
+
+\begin{verbatim}
+$ whatis grep
+grep (1)             - print lines that match patterns
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  usually \texttt{grep} used in 2 ways
+
+  \begin{itemize}
+  \tightlist
+  \item
+    direct
+  \item
+    pipe the last command
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{direct-grep}{%
+\subsubsection{\texorpdfstring{direct
+\texttt{grep}}{direct grep}}\label{direct-grep}}
+
+\begin{itemize}
+\tightlist
+\item
+  searching in file
+\end{itemize}
+
+\begin{verbatim}
+grep "word" filepath
+\end{verbatim}
+
+\begin{quote}
+\texttt{-i} usually used for case-insensitive way
+\end{quote}
+
+\hypertarget{grep-with-pipe}{%
+\subsubsection{\texorpdfstring{\texttt{grep} with
+pipe}{grep with pipe}}\label{grep-with-pipe}}
+
+\begin{itemize}
+\tightlist
+\item
+  simple use
+\end{itemize}
+
+\begin{verbatim}
+yourfirstcommandwithoutput | grep "wordsearchinginoutput"
+\end{verbatim}
+
+\hypertarget{finding-files-with-locate}{%
+\subsection{\texorpdfstring{finding files with
+\texttt{locate}}{finding files with locate}}\label{finding-files-with-locate}}
+
+\begin{verbatim}
+$ whatis locate
+locate (1)           - find files by name, quickly
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  actually \texttt{locate} is not very practical command in my
+  opinion\ldots{}
+\end{itemize}
+
+\hypertarget{enumerating-distribution-and-kernel-information}{%
+\subsection{enumerating distribution and kernel
+information}\label{enumerating-distribution-and-kernel-information}}
+
+\begin{itemize}
+\tightlist
+\item
+  current user
+\end{itemize}
+
+\begin{verbatim}
+whoami
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  os(workstation) name
+\end{itemize}
+
+\begin{verbatim}
+hostname
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  change \texttt{hostname}
+\end{itemize}
+
+\begin{verbatim}
+sudo nano /etc/hostname
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  see the linux distribution
+\end{itemize}
+
+\begin{verbatim}
+lsb_release -a
+\end{verbatim}
+
+\begin{verbatim}
+cat /etc/issue
+\end{verbatim}
+
+\begin{verbatim}
+cat /etc/os-release
+\end{verbatim}
+
+\begin{verbatim}
+cat /etc/*release
+\end{verbatim}
+
+\begin{verbatim}
+uname -a
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  cpu information
+\end{itemize}
+
+\begin{verbatim}
+lscpu
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  pci information
+\end{itemize}
+
+\begin{verbatim}
+lspci
+\end{verbatim}
+
+\hypertarget{find-and-bandit-challanges}{%
+\subsection{find and bandit
+challanges}\label{find-and-bandit-challanges}}
+
+\begin{verbatim}
+$ whatis find    
+find (1)             - search for files(also directories) in a directory hierarchy
+\end{verbatim}
+
+\begin{itemize}
+\item
+  very powerful command!
+\item
+  usage
+\end{itemize}
+
+\begin{verbatim}
+find pathtosearch specifiers
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  specifiers
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{-type}
+  \item
+    \texttt{-name}
+  \item
+    \texttt{-iname}
+  \item
+    \texttt{-size}
+  \item
+    \texttt{-perm}
+  \end{itemize}
+\end{itemize}
+
+\end{document}
