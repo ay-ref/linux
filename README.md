@@ -110,6 +110,18 @@
   java -jar yourjarfile.jar
   ```
 
+- network manager setting from terminal with ui
+
+  ```shell
+  nmtui
+  ```
+
+- remove a file recursively
+
+  ```shell
+  find . -name "FILENAMEWILDCARD" -delete
+  ```
+
 ### Snap
 
 - installing
