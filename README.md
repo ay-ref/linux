@@ -125,6 +125,32 @@
   find . -name "FILENAMEWILDCARD" -delete
   ```
 
+### ssh
+
+- get a file from remote
+
+  ```shell
+  scp remoteuser@remotehostip:/path/to/file localdirectory
+  ```
+
+- get a folder complete from remote
+
+  ```shell
+  scp -r remoteuser@remotehostip:/path/to/directory localdirectory
+  ```
+  
+- send a file to destination ip
+
+  ```shell
+  scp filepath remoteuser@remotehostip:/remote/to/directory
+  ```
+
+- send a folder to destination ip
+
+  ```shell
+  scp -r folderpath remoteuser@remotehostip:/remote/to/directory
+  ```
+
 ### Snap
 
 - installing
