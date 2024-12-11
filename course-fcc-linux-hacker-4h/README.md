@@ -117,6 +117,26 @@
   whatis thecommand
   ```
 
+- see the complete documentation of a command
+
+  ```shell
+  man thecommand
+  ```
+
+- usual way to see the command(app) documentation
+
+  ```shell
+  thecommand -h
+  ```
+
+  ```shell
+  thecommand --help
+  ```
+
+  ```shell
+  thecommand -help
+  ```
+
 - create new file
 
   ```shell
@@ -389,3 +409,63 @@ find (1)             - search for files(also directories) in a directory hierarc
   - `-iname`
   - `-size`
   - `-perm`
+  
+> you can see my `bandit` challange solutions in linux reference root folder `challange-bandit`
+
+## xargs
+
+- get the output as an input for a command!!!
+
+```shell
+$ ls
+another.txt  myfile.txt  README.md
+$ cat another.txt myfile.txt README.md 
+inside text wrote file
+inside text wrote file
+inside markdown text
+$ ls | grep -E "*.txt" | xargs cat
+inside text wrote file
+inside text wrote file
+```
+
+## file command
+
+```shell
+$ whatis file   
+file (1)             - determine file type
+```
+
+```shell
+file *
+another.txt:      ASCII text
+myfile.txt:       ASCII text
+README.md:        ASCII text
+```
+
+## shell
+
+- the terminal interface that you works with it
+
+- see the default shell
+
+```shell
+echo $SHELL                          
+/usr/bin/zsh
+```
+
+- see the all available shells
+
+```shell
+cat /etc/shells
+# /etc/shells: valid login shells
+/bin/sh
+/bin/bash
+/usr/bin/bash
+/bin/rbash
+/usr/bin/rbash
+/usr/bin/sh
+/bin/dash
+/usr/bin/dash
+/bin/zsh
+/usr/bin/zsh
+```
