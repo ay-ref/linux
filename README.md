@@ -258,6 +258,12 @@
 
 ### Mint
 
+- mint has has no default root password!, you should set for it
+
+  ```shell
+  sudo passwd root
+  ```
+  
 - install `.deb` package
 
   ```shell

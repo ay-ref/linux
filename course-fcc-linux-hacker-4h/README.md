@@ -245,9 +245,9 @@
 
 - change the permission of file
 
- ```shell
- chmod mapuserstopermissions filepath
- ```
+  ```shell
+  chmod mapuserstopermissions filepath
+  ```
 
 - map users to permissions
   - `ugo`: owner, group, others
@@ -258,9 +258,9 @@
 
 - change the permission of folder
 
- ```shell
- chmod -R mapuserstopermissions folderpath
- ```
+  ```shell
+  chmod -R mapuserstopermissions folderpath
+  ```
 
 ## file and directory ownership
 
@@ -268,33 +268,33 @@
 
 - change the owner of file
 
- ```shell
- chown newowner filepath
- ```
+  ```shell
+  chown newowner filepath
+  ```
 
 - change the group of file
 
- ```shell
- chgrp newgroup filepath
- ```
+  ```shell
+  chgrp newgroup filepath
+  ```
 
 - see the groups
 
- ```shell
- groups
- ```
+  ```shell
+  groups
+  ```
 
 - see the groups of specific user
 
- ```shell
- groups username
- ```
+  ```shell
+  groups username
+  ```
 
 - see the current logined users
 
- ```shell
- users
- ```
+  ```shell
+  users
+  ```
 
 ## `grep` and piping
 
@@ -311,9 +311,9 @@ grep (1)             - print lines that match patterns
 
 - searching in file
 
- ```shell
- grep "word" filepath
- ```
+  ```shell
+  grep "word" filepath
+  ```
 
 > `-i` usually used for case-insensitive way
 
@@ -321,9 +321,9 @@ grep (1)             - print lines that match patterns
 
 - simple use
 
- ```shell
- yourfirstcommandwithoutput | grep "wordsearchinginoutput"
- ```
+  ```shell
+  yourfirstcommandwithoutput | grep "wordsearchinginoutput"
+  ```
 
 ## finding files with `locate`
 
@@ -340,53 +340,53 @@ locate (1)           - find files by name, quickly
 
  ```shell
  whoami
- ```
+  ```
 
 - os(workstation) name
 
- ```shell
- hostname
- ```
+  ```shell
+  hostname
+  ```
 
 - change `hostname`
 
- ```shell
- sudo nano /etc/hostname
- ```
+  ```shell
+  sudo nano /etc/hostname
+  ```
 
 - see the linux distribution
 
- ```shell
- lsb_release -a
- ```
+  ```shell
+  lsb_release -a
+  ```
 
- ```shell
- cat /etc/issue
- ```
+  ```shell
+  cat /etc/issue
+  ```
 
- ```shell
- cat /etc/os-release
- ```
+  ```shell
+  cat /etc/os-release
+  ```
 
- ```shell
- cat /etc/*release
- ```
+  ```shell
+  cat /etc/*release
+  ```
 
- ```shell
- uname -a
- ```
+  ```shell
+  uname -a
+  ```
 
 - cpu information
 
- ```shell
- lscpu
- ```
+  ```shell
+  lscpu
+  ```
 
-- pci information
+- pci information (see the graphic card)
 
- ```shell
- lspci
- ```
+  ```shell
+  lspci
+  ```
 
 ## find and bandit challanges
 
@@ -399,9 +399,9 @@ find (1)             - search for files(also directories) in a directory hierarc
 
 - usage
 
- ```shell
- find pathtosearch specifiers
- ```
+  ```shell
+  find pathtosearch specifiers
+  ```
 
 - specifiers
   - `-type`
@@ -412,23 +412,23 @@ find (1)             - search for files(also directories) in a directory hierarc
   
 > you can see my `bandit` challange solutions in linux reference root folder `challange-bandit`
 
-## xargs
+## `xargs`
 
 - get the output as an input for a command!!!
 
-```shell
-$ ls
-another.txt  myfile.txt  README.md
-$ cat another.txt myfile.txt README.md 
-inside text wrote file
-inside text wrote file
-inside markdown text
-$ ls | grep -E "*.txt" | xargs cat
-inside text wrote file
-inside text wrote file
-```
+  ```shell
+  $ ls
+  another.txt  myfile.txt  README.md
+  $ cat another.txt myfile.txt README.md 
+  inside text wrote file
+  inside text wrote file
+  inside markdown text
+  $ ls | grep -E "*.txt" | xargs cat
+  inside text wrote file
+  inside text wrote file
+  ```
 
-## file command
+## `file` command
 
 ```shell
 $ whatis file   
@@ -448,24 +448,108 @@ README.md:        ASCII text
 
 - see the default shell
 
-```shell
-echo $SHELL                          
-/usr/bin/zsh
-```
+  ```shell
+  echo $SHELL                          
+  /usr/bin/zsh
+  ```
 
 - see the all available shells
 
+  ```shell
+  cat /etc/shells
+  # /etc/shells: valid login shells
+  /bin/sh
+  /bin/bash
+  /usr/bin/bash
+  /bin/rbash
+  /usr/bin/rbash
+  /usr/bin/sh
+  /bin/dash
+  /usr/bin/dash
+  /bin/zsh
+  /usr/bin/zsh
+  ```
+
+### bash and zsh
+
+- bash config files
+
+  ```shell
+  ls -a | grep .bash 
+  .bash_history
+  .bash_logout
+  .bash_profile
+  .bashrc
+  ```
+  
+- zsh config files
+
+  ```shell
+  ls -a | grep .zsh    
+  .oh-my-zsh
+  .shell.pre-oh-my-zsh
+  .zshenv
+  .zsh_history
+  .zshrc
+  ```
+
+- `history` command
+
+  ```shell
+  history (3readline)  - GNU History Library
+  ```
+  
+## space usage
+
 ```shell
-cat /etc/shells
-# /etc/shells: valid login shells
-/bin/sh
-/bin/bash
-/usr/bin/bash
-/bin/rbash
-/usr/bin/rbash
-/usr/bin/sh
-/bin/dash
-/usr/bin/dash
-/bin/zsh
-/usr/bin/zsh
+whatis du     
+du (1)               - estimate file space usage
 ```
+
+> du runs on current path recursively!
+
+- very practical example usage
+
+  ```shell
+  du -sh * | sort -rh
+  ```
+
+> `sort -h` means human readable sort! (1G > 23K)
+
+## disk usage
+
+```shell
+whatis df
+df (1)               - report file system disk space usage
+```
+
+> not very practical!
+
+## `tar`
+
+```shell
+whatis tar
+tar (1)              - an archiving utility
+```
+
+- archiving
+
+  ```shell
+  tar -cvf tarnewfilename.tar folderpath
+  ```
+
+  ```shell
+  tar -czvf tarnewfilename.tar.gz folderpath
+  ```
+
+- unarchiving
+  
+  ```shell
+  tar -xvf archivedfile.tar
+  ```
+
+  ```shell
+  tar -xzvf archivedfile.tar.gz
+  ```
+
+## users and groups creation
