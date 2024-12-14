@@ -552,4 +552,83 @@ tar (1)              - an archiving utility
   tar -xzvf archivedfile.tar.gz
   ```
 
-## users and groups creation
+## users and groups in more detail
+
+- how to change `sudoers` file
+
+  ```shell
+  sudo nano /etc/sudoers
+  ```
+
+> above command does not work!, use from below command!
+
+```shell
+sudo visudo
+```
+  
+- create new user
+
+  ```shell
+  sudo useradd yourusername
+  ```
+
+- user add with advanced options
+
+  ```shell
+  useradd -m -c "Akbar Akbari" -s /bin/bash akbar
+  ```
+  
+  > `-m` makes a specific folder for user in `home`!
+  
+- create new group
+
+  ```shell
+  sudo groupadd yourgroupname
+  ```
+  
+- see the groups of specific user
+
+  ```shell
+  groups username
+  ```
+
+- map a user to a group
+
+  ```shell
+  usermod -aG groupname username
+  ```
+
+- remove a user
+
+  ```shell
+  userdel yourusername
+  ```
+
+  ```shell
+  sudo userdel -r alexis
+  ```
+  
+- important file about users and groups
+
+  ```shell
+  cat /etc/passwd
+  ```
+
+- see the all groups on system
+
+  ```shell
+  cat /etc/group
+  ```
+
+- `visudo` config format
+
+  ```shell
+  yourusername  <hosts>=(<users>:<groups>) <accesse_commands>
+  ```
+
+- also same for groups, but
+
+  ```shell
+  %yourgroupname ...
+  ```
+  
