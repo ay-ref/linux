@@ -119,6 +119,12 @@
   nmtui
   ```
 
+- see which ports are used!
+
+  ```shell
+  netstat -tunlp
+  ```
+
 - remove a file recursively
 
   ```shell
