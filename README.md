@@ -302,6 +302,18 @@ does not boot completely!!!
 - a package for general-purpose command-line tool for reading, writing, redirecting
 and encrypting data across a network.
 
+- run server
+
+  ```shell
+  nc -lv localhost <port>
+  ```
+
+- sending data to server
+
+  ```shell
+  nc -v localhost <port>
+  ```
+
 ### Firefox
 
 - open app
