@@ -157,6 +157,12 @@
   scp -r folderpath remoteuser@remotehostip:/remote/to/directory
   ```
 
+- copy files with progress status
+
+  ```shell
+  rsync -ah --progress source destination
+  ```
+
 ### Snap
 
 - installing
