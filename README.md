@@ -163,6 +163,12 @@
   rsync -ah --progress source destination
   ```
 
+- sha2 hash of string
+
+  ```shell
+  echo -n "your text" | sha256sum
+  ```
+
 ### Snap
 
 - installing
