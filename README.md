@@ -125,6 +125,12 @@
   netstat -tunlp
   ```
 
+- see port status
+
+  ```shell
+  nmap -p 5432 172.19.0.3
+  ```
+
 - remove a file recursively
 
   ```shell
@@ -168,6 +174,8 @@
   ```shell
   echo -n "your text" | sha256sum
   ```
+
+- see open
 
 ### Snap
 
