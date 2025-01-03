@@ -175,7 +175,17 @@
   echo -n "your text" | sha256sum
   ```
 
-- see open
+- see all process
+
+  ```shell
+  ps aux | grep whatyouwant
+  ```
+
+- kill process
+
+  ```shell
+  sudo kill -9 pid 
+  ```
 
 ### Snap
 
