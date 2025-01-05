@@ -175,6 +175,13 @@
   echo -n "your text" | sha256sum
   ```
 
+- send DHCP
+
+  ```shell
+  sudo dhclient -r
+  sudo dhclient
+  ```
+
 - see all process
 
   ```shell
