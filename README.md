@@ -342,7 +342,7 @@ and encrypting data across a network.
 - run server
 
   ```shell
-  nc -lv localhost <port>
+  nc -lv <port>
   ```
 
 - sending data to server
