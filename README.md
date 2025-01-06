@@ -194,6 +194,12 @@
   sudo kill -9 pid 
   ```
 
+- see app for port usage
+
+  ```shell
+  sudo lsof -i :5432
+  ```
+
 ### Snap
 
 - installing
