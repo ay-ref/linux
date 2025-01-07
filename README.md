@@ -137,6 +137,22 @@
   find . -name "FILENAMEWILDCARD" -delete
   ```
 
+- increase the time login time
+
+  ```shell
+  sudo visudo
+  ```
+  
+  ```shell
+  Defaults        timestamp_timeout=240 # in minutes (4 hours)
+  ```
+
+- to beautify the `json` format
+
+  ```shell
+  echo_json_file | jq .
+  ```
+  
 ### ssh
 
 - get a file from remote
