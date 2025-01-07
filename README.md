@@ -65,6 +65,12 @@
   echo "alias aliasname='aliascommand'" >> ~/.zshrc && source ~/.zshrc
   ```
 
+- add app to path
+
+  ```shell
+  echo 'export PATH=/your/directory/path:$PATH' >> ~/.bashrc && source ~/.bashrc
+  ```
+
 - see the disk usage of folders and files:
 
   ```shell
