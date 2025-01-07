@@ -191,7 +191,30 @@
   echo -n "your text" | sha256sum
   ```
 
-- see open
+- send DHCP
+
+  ```shell
+  sudo dhclient -r
+  sudo dhclient
+  ```
+
+- see all process
+
+  ```shell
+  ps aux | grep whatyouwant
+  ```
+
+- kill process
+
+  ```shell
+  sudo kill -9 pid 
+  ```
+
+- see app for port usage
+
+  ```shell
+  sudo lsof -i :5432
+  ```
 
 ### Snap
 
@@ -341,7 +364,7 @@ and encrypting data across a network.
 - run server
 
   ```shell
-  nc -lv localhost <port>
+  nc -lv <port>
   ```
 
 - sending data to server
