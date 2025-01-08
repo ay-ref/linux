@@ -147,12 +147,74 @@
   Defaults        timestamp_timeout=240 # in minutes (4 hours)
   ```
 
+- running and background and also saving logs!
+
+  ```shell
+  yourcommand >output.log 2>&1 &
+  ```
+
+- see your background procceses
+
+  ```shell
+  jobs
+  ```
+
+- The `+` symbol indicates the current job. This is the job that will be affected by commands like fg or bg if you don't specify a job ID.
+- The `-` symbol indicates the previous job (the one before the current job).
+- Other jobs do not have a symbol.
+
+- Running: The job is actively running in the background.
+- Stopped: The job has been paused (e.g., with Ctrl+Z).
+- Done: The job has completed execution.
+
+- fg %1: Brings job [1] to the foreground.
+- bg %1: Resumes job [1] in the background.
+- kill %1: Kills job [1].
+  
 - to beautify the `json` format
 
   ```shell
-  echo_json_file | jq .
+  jsonoutputer | jq .
   ```
-  
+
+- see log online
+
+  ```shell
+  tail -f logfile.log
+  ```
+
+### systemd
+
+- start the service
+
+```shell
+systemctl start yourservice.service
+```
+
+- stop the service
+
+```shell
+systemctl stop yourservice.service
+```
+
+- restart the service
+
+```shell
+systemctl restart yourservice.service
+```
+
+- enable the service to run after boot
+
+```shell
+systemctl enable yourservice.service
+```
+
+- diable the service to run after boot
+
+```shell
+systemctl diable yourservice.service
+```
+
 ### ssh
 
 - get a file from remote

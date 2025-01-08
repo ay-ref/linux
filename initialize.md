@@ -5,6 +5,24 @@
 > one of best options for server installation is **ubuntu server** os!
 
 ```shell
+sudo nano /etc/netplan/50-cloud-init.yaml
+```
+
+```shell
+network:
+    ethernets:
+        enp0s3:
+            dhcp-identifier: mac
+            dhcp4: true
+            optional: true
+    version: 2
+```
+
+```shell
+sudo systemctl restart systemd-networkd
+```
+
+```shell
 sudo apt update
 sudp apt upgrade
 ```
