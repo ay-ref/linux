@@ -189,6 +189,20 @@
   tail -f logfile.log
   ```
 
+- find and replace all command from out of text file
+
+  ```shell
+  sed 's/pattern/replacement/g' file
+  ```
+
+  ```shell
+  sed -i 's/pattern/replacement/g' file
+  ```
+
+  ```shell
+  sed -i.bak 's/pattern/replacement/g' file
+  ```
+  
 ### systemd
 
 - start the service
