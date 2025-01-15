@@ -169,14 +169,31 @@
 - The `-` symbol indicates the previous job (the one before the current job).
 - Other jobs do not have a symbol.
 
-- Running: The job is actively running in the background.
-- Stopped: The job has been paused (e.g., with Ctrl+Z).
-- Done: The job has completed execution.
+- Running
+  - The job is actively running in the background.
+- Stopped
+  - The job has been paused (e.g., with Ctrl+Z).
+- Done
+  - The job has completed execution.
 
-- fg %1: Brings job [1] to the foreground.
-- bg %1: Resumes job [1] in the background.
-- kill %1: Kills job [1].
-  
+- brings job [1] to the foreground.
+
+```shell
+fg %1
+```
+
+- resumes job [1] in the background.
+
+```shell
+bg %1
+```
+
+- kills job [1].
+
+```shell
+kill %1
+```
+
 - to beautify the `json` format
 
   ```shell
@@ -186,7 +203,7 @@
 - see log online
 
   ```shell
-  tail -f logfile.log
+  tail -f output.log
   ```
 
 - find and replace all command from out of text file
@@ -428,8 +445,28 @@ systemctl diable yourservice.service
   ```shell
   sudo su
   ```
-  
-### Centos
+
+### fedora
+
+- see the all installed Packages
+
+```shell
+rpm -aq
+```
+
+- export `rpm` file.
+
+```shell
+sudo yum install rpmrebuild
+```
+
+- create `rpm`
+
+```shell
+rpmrebuild your_app_name
+```
+
+### centos
 
 - if the root disk usage become 100% your operating system
 does not boot completely!!!
