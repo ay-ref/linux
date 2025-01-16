@@ -58,6 +58,8 @@
   sudo lsof -i -P -n | grep LISTEN
   ```
   
+> ***`*` does not contains hidden files!!!***
+
 - add `alias` permanently in one command
 
   ```shell
