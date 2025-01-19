@@ -133,6 +133,22 @@
   netstat -tunlp
   ```
 
+- see the porxies
+
+  ```shell
+  $ env | grep -i proxy
+  NO_PROXY=localhost,127.0.0.0/8,127.0.1.1
+  http_proxy=http://192.168.1.250:8080/
+  FTP_PROXY=ftp://192.168.1.250:8080/
+  ftp_proxy=ftp://192.168.1.250:8080/
+  all_proxy=socks://192.168.1.250:8080/
+  ALL_PROXY=socks://192.168.1.250:8080/
+  HTTPS_PROXY=https://192.168.1.250:8080/
+  https_proxy=https://192.168.1.250:8080/
+  no_proxy=localhost,127.0.0.0/8,127.0.1.1
+  HTTP_PROXY=http://192.168.1.250:8080/  
+  ```
+
 - see port status
 
   ```shell
