@@ -8,6 +8,11 @@ sudp apt upgrade
 ```
 
 ```shell
+sudo apt-get update
+sudo apt-get upgrade
+```
+
+```shell
 sudo apt install nano
 sudo apt install inetutils-ping
 ```
@@ -32,4 +37,9 @@ sudo apt install net-tools
 sudo apt install openssh-server
 sudo systemctl enable sshd
 sudo systemctl start sshd
+```
+
+```shell
+sudo apt install curl
+sudo apt install wget
 ```

@@ -631,4 +631,61 @@ sudo visudo
   ```shell
   %yourgroupname ...
   ```
+
+## networking
+
+```shell
+$ whatis ip
+ip (8)               - show / manipulate routing, network devices, interfaces and tunnels
+```
+
+- see your ip addresses
+
+  ```shell
+  ip addr
+  ```
+  
+```shell
+whatis ifconfig            
+ifconfig (8)         - configure a network interface
+```
+
+- see your network configs
+
+  ```shell
+  ifconfig
+  ```
+  
+- reset the network manager
+
+  ```shell
+  systemctl restart network-manager
+  ```
+  
+  ```shell
+  service network-manager restart
+  ```
+  
+```shell
+$ whatis netstat
+netstat (8)          - Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
+```
+
+- in networking the most practical command is `netstat`, so learn it very well.
+
+## tor and proxychains
+
+- install tor **service**
+
+  ```shell
+  whatis tor        
+  tor (5)              - The second-generation onion router
+  ```
+  
+- install proxychains
+
+  ```shell
+  whatis proxychains         
+  proxychains (1)      - redirect connections through proxy servers
+  ```
   
