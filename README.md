@@ -58,11 +58,19 @@
   sudo lsof -i -P -n | grep LISTEN
   ```
   
+> ***`*` does not contains hidden files!!!***
+
 - add `alias` permanently in one command
 
   ```shell
   echo "alias aliasname='aliascommand'" >> ~/.bashrc && source ~/.bashrc
   echo "alias aliasname='aliascommand'" >> ~/.zshrc && source ~/.zshrc
+  ```
+
+- add app to path
+
+  ```shell
+  echo 'export PATH=/your/directory/path:$PATH' >> ~/.bashrc && source ~/.bashrc
   ```
 
 - see the disk usage of folders and files:
@@ -125,6 +133,22 @@
   netstat -tunlp
   ```
 
+- see the porxies
+
+  ```shell
+  $ env | grep -i proxy
+  NO_PROXY=localhost,127.0.0.0/8,127.0.1.1
+  http_proxy=http://192.168.1.250:8080/
+  FTP_PROXY=ftp://192.168.1.250:8080/
+  ftp_proxy=ftp://192.168.1.250:8080/
+  all_proxy=socks://192.168.1.250:8080/
+  ALL_PROXY=socks://192.168.1.250:8080/
+  HTTPS_PROXY=https://192.168.1.250:8080/
+  https_proxy=https://192.168.1.250:8080/
+  no_proxy=localhost,127.0.0.0/8,127.0.1.1
+  HTTP_PROXY=http://192.168.1.250:8080/  
+  ```
+
 - see port status
 
   ```shell
@@ -136,6 +160,115 @@
   ```shell
   find . -name "FILENAMEWILDCARD" -delete
   ```
+
+- increase the time login time
+
+  ```shell
+  sudo visudo
+  ```
+  
+  ```shell
+  Defaults        timestamp_timeout=240 # in minutes (4 hours)
+  ```
+
+- running and background and also saving logs!
+
+  ```shell
+  yourcommand >output.log 2>&1 &
+  ```
+
+- see your background procceses
+
+  ```shell
+  jobs
+  ```
+
+- The `+` symbol indicates the current job. This is the job that will be affected by commands like fg or bg if you don't specify a job ID.
+- The `-` symbol indicates the previous job (the one before the current job).
+- Other jobs do not have a symbol.
+
+- Running
+  - The job is actively running in the background.
+- Stopped
+  - The job has been paused (e.g., with Ctrl+Z).
+- Done
+  - The job has completed execution.
+
+- brings job [1] to the foreground.
+
+```shell
+fg %1
+```
+
+- resumes job [1] in the background.
+
+```shell
+bg %1
+```
+
+- kills job [1].
+
+```shell
+kill %1
+```
+
+- to beautify the `json` format
+
+  ```shell
+  jsonoutputer | jq .
+  ```
+
+- see log online
+
+  ```shell
+  tail -f output.log
+  ```
+
+- find and replace all command from out of text file
+
+  ```shell
+  sed 's/pattern/replacement/g' file
+  ```
+
+  ```shell
+  sed -i 's/pattern/replacement/g' file
+  ```
+
+  ```shell
+  sed -i.bak 's/pattern/replacement/g' file
+  ```
+  
+### systemd
+
+- start the service
+
+```shell
+systemctl start yourservice.service
+```
+
+- stop the service
+
+```shell
+systemctl stop yourservice.service
+```
+
+- restart the service
+
+```shell
+systemctl restart yourservice.service
+```
+
+- enable the service to run after boot
+
+```shell
+systemctl enable yourservice.service
+```
+
+- diable the service to run after boot
+
+```shell
+systemctl diable yourservice.service
+```
 
 ### ssh
 
@@ -175,6 +308,13 @@
   echo -n "your text" | sha256sum
   ```
 
+- send DHCP
+
+  ```shell
+  sudo dhclient -r
+  sudo dhclient
+  ```
+
 - see all process
 
   ```shell
@@ -185,6 +325,12 @@
 
   ```shell
   sudo kill -9 pid 
+  ```
+
+- see app for port usage
+
+  ```shell
+  sudo lsof -i :5432
   ```
 
 ### Snap
@@ -317,8 +463,28 @@
   ```shell
   sudo su
   ```
-  
-### Centos
+
+### fedora
+
+- see the all installed Packages
+
+```shell
+rpm -aq
+```
+
+- export `rpm` file.
+
+```shell
+sudo yum install rpmrebuild
+```
+
+- create `rpm`
+
+```shell
+rpmrebuild your_app_name
+```
+
+### centos
 
 - if the root disk usage become 100% your operating system
 does not boot completely!!!
@@ -335,7 +501,7 @@ and encrypting data across a network.
 - run server
 
   ```shell
-  nc -lv localhost <port>
+  nc -lv <port>
   ```
 
 - sending data to server
