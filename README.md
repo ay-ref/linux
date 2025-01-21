@@ -472,6 +472,12 @@ systemctl diable yourservice.service
 rpm -aq
 ```
 
+- download your rpm with **DEPENDENCIES**
+
+```shell
+yumdownloader --resolve <package_name>
+```
+
 - export `rpm` file.
 
 ```shell
@@ -483,6 +489,7 @@ sudo yum install rpmrebuild
 ```shell
 rpmrebuild your_app_name
 ```
+
 
 ### centos
 
