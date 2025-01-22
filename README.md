@@ -333,6 +333,12 @@ systemctl diable yourservice.service
   sudo lsof -i :5432
   ```
 
+- change date
+
+  ```shell
+  date -s "date_output_like"
+  ```
+
 ### Snap
 
 - installing
