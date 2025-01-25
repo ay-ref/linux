@@ -237,6 +237,12 @@ kill %1
   ```shell
   sed -i.bak 's/pattern/replacement/g' file
   ```
+
+- just a process to up system
+
+  ```shell
+  sleep 600 # 10 minutes
+  ```
   
 ### systemd
 
@@ -495,7 +501,6 @@ sudo yum install rpmrebuild
 ```shell
 rpmrebuild your_app_name
 ```
-
 
 ### centos
 
