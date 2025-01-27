@@ -243,6 +243,12 @@ kill %1
   ```shell
   sleep 600 # 10 minutes
   ```
+
+- run a command periodic to see the result realtime
+
+  ```shell
+  watch -n 0.5 your_command
+  ```
   
 ### systemd
 
