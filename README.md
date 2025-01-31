@@ -249,6 +249,14 @@ kill %1
   ```shell
   watch -n 0.5 your_command
   ```
+
+- set static ip
+
+sudo nmcli con mod <connection-name> ipv4.method manual ipv4.addresses 192.168.56.100/24 ipv4.gateway 192.168.56.1 ipv4.dns 8.8.8.8
+
+  ```shell
+  sudo nmcli con mod <connection-name> ipv4.method manual ipv4.addresses 192.168.56.100/24 ipv4.gateway 192.168.56.1 ipv4.dns 8.8.8.8
+  ```
   
 ### systemd
 
