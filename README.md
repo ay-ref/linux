@@ -446,10 +446,17 @@ systemctl diable yourservice.service
 
 ### Xfce
 
+#### apps
+
 - file manager: thunar
 - disk usage analyzer: baobab
 - pdf reader: xreader
 - text editor: xed
+
+#### tricks
+
+- zooming (in normal mode :) )
+  - `alt` + `scroll`
 
 ### Gnome
 
