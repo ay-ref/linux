@@ -73,23 +73,14 @@
   echo 'export PATH=/your/directory/path:$PATH' >> ~/.bashrc && source ~/.bashrc
   ```
 
-- see the disk usage of folders and files:
+- see the disk usage useful commands
 
   ```shell
-  df -h <your-path>
+  df -h yourpath
+  df -h /
+  du -shx * | sort -rh | head -10
+  sudo du -h --max-depth=1
   ```
-
-  - example:
-
-      ```shell
-      df -h /
-      ```
-
-  - or
-
-    ```shell
-    sudo du -h --max-depth=1
-    ```
 
 - see the partitions
 
