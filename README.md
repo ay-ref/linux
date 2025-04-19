@@ -360,6 +360,11 @@ systemctl diable yourservice.service
   date -s "date_output_like"
   ```
 
+- while linux is up it should create a swap in size of your ram,
+  if it can't (for example for having full disk drive),
+  the system does not goes up, (if you can)decrease
+  the amount of ram for solving from problem temporary!
+
 ### Snap
 
 - installing
