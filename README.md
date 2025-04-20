@@ -70,21 +70,18 @@
 - one of the fastest way to define your commands as shortcut
 is to use from `alias`es, even in your running project!
 	- in your project folder
-		```sh
-		nano setup.sh
-		```
+		- create a file like name `setup.sh`
+		- define your function
 
-		```sh
-		alias command1="aliascommand1"
-		alias command2="aliascommand2"
-		...
-		```
+			```sh
+			yourname() {
+				yourcommand
+			}
+			```
 
-		```sh
-		chmod +x ./setup.sh
-		source ./setup.sh
-		```
-
+			- you can use from input arguments by `$1`, `$2`, ...
+			- you can call the function like `yourname firstarg secondarg`
+			
 		- now use from your `command1`, `command2` easily 
 
 - add app to path
