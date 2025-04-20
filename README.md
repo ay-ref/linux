@@ -67,6 +67,26 @@
   echo "alias aliasname='aliascommand'" >> ~/.zshrc && source ~/.zshrc
   ```
 
+- one of the fastest way to define your commands as shortcut
+is to use from `alias`es, even in your running project!
+	- in your project folder
+		```sh
+		nano setup.sh
+		```
+
+		```sh
+		alias command1="aliascommand1"
+		alias command2="aliascommand2"
+		...
+		```
+
+		```sh
+		chmod +x ./setup.sh
+		source ./setup.sh
+		```
+
+		- now use from your `command1`, `command2` easily 
+
 - add app to path
 
   ```shell
