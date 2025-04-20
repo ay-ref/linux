@@ -191,6 +191,8 @@ is to use from `alias`es, even in your running project!
   jobs
   ```
 
+> you can have the latest runned background job in the session with **`$i`** command!
+
 - The `+` symbol indicates the current job. This is the job that will be affected by commands like fg or bg if you don't specify a job ID.
 - The `-` symbol indicates the previous job (the one before the current job).
 - Other jobs do not have a symbol.
