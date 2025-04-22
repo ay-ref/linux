@@ -355,24 +355,6 @@ systemctl diable yourservice.service
   sudo dhclient
   ```
 
-- see all process
-
-  ```shell
-  ps aux | grep whatyouwant
-  ```
-
-- kill process
-
-  ```shell
-  sudo kill -9 pid 
-  ```
-
-- see app for port usage
-
-  ```shell
-  sudo lsof -i :5432
-  ```
-
 - change date
 
   ```shell
