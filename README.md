@@ -38,6 +38,12 @@
 - recommended to don't install snap on linux!
 - just try download the file from the internet.
 
+- change the password to everything you want!
+
+```sh
+sudo passwd youruser
+```
+
 - how to see the hostname
 
   ```shell
