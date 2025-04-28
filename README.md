@@ -122,7 +122,13 @@ is to use from `alias`es, even in your running project!
   ```shell
   grep -rnw yourpath -e "yourregex"
   ```
-  
+
+- issue with entering bios in fast boot
+
+```sh
+systemctl reboot --firmware-setup
+```
+
 - go to terminal before login to linux shortcut:
   - `ctrl + alt + f2`
   - for back to graphical:
