@@ -123,6 +123,14 @@ is to use from `alias`es, even in your running project!
   grep -rnw yourpath -e "yourregex"
   ```
 
+- fast dns add/remove
+
+```sh
+sudo sed -i '2i\nameserver 192.168.200.168' /etc/resolv.conf
+sudo sed -i '2d' /etc/resolv.conf
+```
+
+
 - issue with entering bios in fast boot
 
 ```sh
