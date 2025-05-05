@@ -149,6 +149,12 @@ systemctl reboot --firmware-setup
   java -jar yourjarfile.jar
   ```
 
+- unzip large file end of file error
+
+```sh
+jar xvf yourfile.zip
+```
+
 - network manager setting from terminal with ui
 
   ```shell
