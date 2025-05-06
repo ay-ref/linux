@@ -148,12 +148,9 @@ systemctl reboot --firmware-setup
   ```shell
   java -jar yourjarfile.jar
   ```
+> if you saw large files in linux think about NTFS.
 
-- unzip large file end of file error
-
-```sh
-jar xvf yourfile.zip
-```
+> **for large files( > 2GB) zipping you should use from zip splitting feature in linux if you dont use from ntfs**
 
 - network manager setting from terminal with ui
 
