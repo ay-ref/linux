@@ -1,0 +1,34 @@
+# personal
+
+## packages and apps
+
+```sh
+git
+nano
+micro
+zsh
+ohmyzsh with plugins
+lazydocker
+docker
+nekoray
+
+waveterm
+```
+
+## `.zshrc` or `.bashrc`
+
+```sh
+# ay aliases
+alias cddev="cd devpath"
+alias cdref="cd refpath"
+
+alias appname="apppath"
+
+alias opnevpnconnect="sudo openvpn --config ovpnconfigpath"
+
+alias opendns="sudo nano /etc/resolve.conf"
+alias adddns="sudo sed -i '2i\nameserver 192.168.xx.xx' /etc/resolve.conf"
+```
+
+
+
