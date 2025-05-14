@@ -28,6 +28,12 @@ alias opnevpnconnect="sudo openvpn --config ovpnconfigpath"
 
 alias opendns="sudo nano /etc/resolve.conf"
 alias adddns="sudo sed -i '2i\nameserver 192.168.xx.xx' /etc/resolve.conf"
+
+alias dockerex="docker ps | grep Exited"
+alias dockerup="docker compose up -d"
+alias dockerdown="docker compose down -vf"
+
+alias ipuser22="192.168.xx.xx"
 ```
 
 
