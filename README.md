@@ -602,3 +602,19 @@ and encrypting data across a network.
   ```shell
   google-chrome
   ```
+
+## Games!
+
+### SuperTuxCart
+
+- racing
+- multiplayer
+- online and lan possible
+- 700 MB :)
+
+### AssaultQube
+
+- shooting
+- multiplayer
+- online and lan possible
+- 50 MB :))
