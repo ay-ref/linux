@@ -145,6 +145,13 @@ sudo sed -i '2d' /etc/resolv.conf
 systemctl reboot --firmware-setup
 ```
 
+- issue with opening drive in kde gui or arch linux
+
+```sh
+lsblk
+sudo ntfs-3g /dev/sda2 .
+```
+
 - go to terminal before login to linux shortcut:
   - `ctrl + alt + f2`
   - for back to graphical:
