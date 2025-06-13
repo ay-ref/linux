@@ -608,6 +608,8 @@ and encrypting data across a network.
 ### SuperTuxCart
 
 - racing
+- open-source
+- singleplayer
 - multiplayer
 - online and lan possible
 - 700 MB :)
@@ -615,6 +617,8 @@ and encrypting data across a network.
 ### AssaultQube
 
 - shooting
+- open-source
+- singleplayer
 - multiplayer
 - online and lan possible
 - 50 MB :))
