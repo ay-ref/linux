@@ -18,7 +18,7 @@
 
 [IMAGE LINK](https://i.sstatic.net/9EQBC.png)
 
-- see all process
+- see all signals
 
   ```shell
   sudo kill -l
@@ -27,5 +27,5 @@
 - kill process
 
   ```shell
-  sudo kill -9 pid 
+  sudo kill -9 pid
   ```

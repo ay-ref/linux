@@ -2,7 +2,7 @@
 
 ## ubuntu
 
-> one of best options for server installation is **ubuntu server** os!
+> one of best options for usual server installation is **ubuntu server** os!
 
 ```shell
 sudo nano /etc/netplan/50-cloud-init.yaml

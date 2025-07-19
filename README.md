@@ -13,6 +13,7 @@ rsync -avz -e ssh \
 ### Shell
 
 - install and config **zsh**
+
   - [LINK](https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df)
 
 - create new file
@@ -22,13 +23,15 @@ rsync -avz -e ssh \
   ```
 
 - create a range of files
+
   - example:
 
     ```shell
     touch myfiles{1..10}.txt
     ```
-  
+
 - `grep` one of the most practical linux commands for filtering:
+
   - example:
 
     ```shell
@@ -71,8 +74,8 @@ sudo passwd youruser
   ```shell
   sudo lsof -i -P -n | grep LISTEN
   ```
-  
-> ***`*` does not contains hidden files!!!***
+
+> **_`_` does not contains hidden files!!!\***
 
 - add `alias` permanently in one command
 
@@ -82,21 +85,18 @@ sudo passwd youruser
   ```
 
 - one of the fastest way to define your commands as shortcut
-is to use from `alias`es, even in your running project!
-	- in your project folder
-		- create a file like name `setup.sh`
-		- define your function
+  is to use from `alias`es, even in your running project! - in your project folder - create a file like name `setup.sh` - define your function
 
-			```sh
-			yourname() {
-				yourcommand
-			}
-			```
+      		```sh
+      		yourname() {
+      			yourcommand
+      		}
+      		```
 
-			- you can use from input arguments by `$1`, `$2`, ...
-			- you can call the function like `yourname firstarg secondarg`
-			
-		- now use from your `command1`, `command2` easily 
+      		- you can use from input arguments by `$1`, `$2`, ...
+      		- you can call the function like `yourname firstarg secondarg`
+
+      	- now use from your `command1`, `command2` easily
 
 - add app to path
 
@@ -138,7 +138,6 @@ sudo sed -i '2i\nameserver 192.168.200.168' /etc/resolv.conf
 sudo sed -i '2d' /etc/resolv.conf
 ```
 
-
 - issue with entering bios in fast boot
 
 ```sh
@@ -153,6 +152,7 @@ sudo ntfs-3g /dev/sda2 .
 ```
 
 - go to terminal before login to linux shortcut:
+
   - `ctrl + alt + f2`
   - for back to graphical:
     - `ctrl + alt + f1` (centos worked)
@@ -163,7 +163,8 @@ sudo ntfs-3g /dev/sda2 .
   ```shell
   java -jar yourjarfile.jar
   ```
-> if you saw large files in linux think about NTFS.
+
+  > if you saw large files in linux think about NTFS.
 
 > **for large files( > 2GB) zipping you should use from zip splitting feature in linux if you dont use from ntfs**
 
@@ -192,7 +193,7 @@ sudo ntfs-3g /dev/sda2 .
   HTTPS_PROXY=https://192.168.1.250:8080/
   https_proxy=https://192.168.1.250:8080/
   no_proxy=localhost,127.0.0.0/8,127.0.1.1
-  HTTP_PROXY=http://192.168.1.250:8080/  
+  HTTP_PROXY=http://192.168.1.250:8080/
   ```
 
 - see port status
@@ -212,7 +213,7 @@ sudo ntfs-3g /dev/sda2 .
   ```shell
   sudo visudo
   ```
-  
+
   ```shell
   Defaults        timestamp_timeout=240 # in minutes (4 hours)
   ```
@@ -240,6 +241,7 @@ sudo ntfs-3g /dev/sda2 .
 - Stopped
   - The job has been paused (e.g., with Ctrl+Z).
 - Done
+
   - The job has completed execution.
 
 - brings job [1] to the foreground.
@@ -315,7 +317,7 @@ kill %1
   ```shell
   nmcli con show
   ```
-  
+
 ### systemd
 
 - start the service
@@ -361,7 +363,7 @@ systemctl diable yourservice.service
   ```shell
   scp -r remoteuser@remotehostip:/path/to/directory localdirectory
   ```
-  
+
 - send a file to destination ip
 
   ```shell
@@ -435,13 +437,13 @@ systemctl diable yourservice.service
   ```shell
   gpg --list-secret-keys
   ```
-  
+
 - export your keys
 
   ```shell
   gpg --export-secret-keys [key-id | email] > private_key.asc
   ```
-  
+
 - import your keys
 
   ```shell
@@ -455,7 +457,7 @@ systemctl diable yourservice.service
   gpg --delete-secret-key [KeyID]
   ```
 
-- symmetric encryption with just passphrase! (***very practical***)
+- symmetric encryption with just passphrase! (**_very practical_**)
 
   ```shell
   gpg -c --no-symkey-cache <filename>
@@ -466,7 +468,7 @@ systemctl diable yourservice.service
   ```shell
   gpg -e -r <key-email> <filename>
   ```
-  
+
 - now decrypt symmetric
 
   ```shell
@@ -500,6 +502,10 @@ systemctl diable yourservice.service
 - pdf reader: xdg-open
 - text editor: gedit
 
+### KDE
+
+- file manager: dolphin
+
 ## Distros
 
 ### Debian
@@ -523,7 +529,7 @@ systemctl diable yourservice.service
   ```shell
   sudo passwd root
   ```
-  
+
 - install `.deb` package
 
   ```shell
@@ -571,16 +577,16 @@ rpmrebuild your_app_name
 ### centos
 
 - if the root disk usage become 100% your operating system
-does not boot completely!!!
+  does not boot completely!!!
   - you probably go to your virtual terminal with `ctrl+alt+f2`
-  shortcut to remove some of your data for booting completely!
+    shortcut to remove some of your data for booting completely!
 
 ## Apps and Packages
 
 ### ncat
 
 - a package for general-purpose command-line tool for reading, writing, redirecting
-and encrypting data across a network.
+  and encrypting data across a network.
 
 - run server
 
