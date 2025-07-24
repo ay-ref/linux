@@ -600,6 +600,14 @@ rpmrebuild your_app_name
   nc -v localhost <port>
   ```
 
+### unrar
+
+- extract `.rar` file
+
+  ```shell
+  unrar x yourfile.rar
+  ```
+
 ### Firefox
 
 - open app
