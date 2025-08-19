@@ -1,5 +1,19 @@
 # Linux Network Notes
 
+- see available connection network
+
+```sh
+nmcli connectoin show
+```
+
+```sh
+nmcli connection up "ConnectionName" # find connection name in above command
+```
+
+```sh
+nmcli connection down "ConnectionName"
+```
+
 - restart your `iptables` to first configs
 
 ```sh
