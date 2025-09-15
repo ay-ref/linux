@@ -533,6 +533,12 @@ systemctl diable yourservice.service
   sudo dpkg -i <packagepath>
   ```
 
+- list packages (YOU SHOULD DO THIS BEFORE DELETE)
+
+  ```shell
+  sudo dpkg --list
+  ```
+
 - remove `.deb` package
 
   ```shell
