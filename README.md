@@ -34,10 +34,6 @@ rsync -avz -e ssh \
 
   - example:
 
-- `grep` one of the most practical linux commands for filtering:
-
-  - example:
-
     ```shell
     ls | grep <wanted-folder>
     ```
@@ -56,28 +52,8 @@ rsync -avz -e ssh \
 
 - change the password to everything you want!
 
-```sh
-sudo passwd youruser
-```
-
-- how to see the hostname
-
-  ```shell
-  hostname
-  ```
-
-- how to see the hostname ip in LAN
-
-  ```shell
-  hostname -I
-  ```
-
-> first ip is your ipv4 in LAN
-
-- how to see the current port usuage:
-
-  ```shell
-  sudo lsof -i -P -n | grep LISTEN
+  ```sh
+  sudo passwd youruser
   ```
 
 > **_`_` does not contains hidden files!!!\***
@@ -179,40 +155,6 @@ sudo ntfs-3g /dev/sda2 .
 
 > **for large files( > 2GB) zipping you should use from zip splitting feature in linux if you dont use from ntfs**
 
-- network manager setting from terminal with ui
-
-  ```shell
-  nmtui
-  ```
-
-- see which ports are used!
-
-  ```shell
-  netstat -tunlp
-  ```
-
-- see the porxies
-
-  ```shell
-  $ env | grep -i proxy
-  NO_PROXY=localhost,127.0.0.0/8,127.0.1.1
-  http_proxy=http://192.168.1.250:8080/
-  FTP_PROXY=ftp://192.168.1.250:8080/
-  ftp_proxy=ftp://192.168.1.250:8080/
-  all_proxy=socks://192.168.1.250:8080/
-  ALL_PROXY=socks://192.168.1.250:8080/
-  HTTPS_PROXY=https://192.168.1.250:8080/
-  https_proxy=https://192.168.1.250:8080/
-  no_proxy=localhost,127.0.0.0/8,127.0.1.1
-  HTTP_PROXY=http://192.168.1.250:8080/
-  ```
-
-- see port status
-
-  ```shell
-  nmap -p 5432 172.19.0.3
-  ```
-
 - remove a file recursively
 
   ```shell
@@ -228,56 +170,6 @@ sudo ntfs-3g /dev/sda2 .
   ```shell
   Defaults        timestamp_timeout=240 # in minutes (4 hours)
   ```
-
-- running and background and also saving logs!
-
-  ```shell
-  yourcommand >output.log 2>&1 &
-  ```
-
-- see your background procceses
-
-  ```shell
-  jobs
-  ```
-
-> you can have the latest runned background job in the session with **`$i`** command!
-
-- The `+` symbol indicates the current job. This is the job that will be affected by commands like fg or bg if you don't specify a job ID.
-
-- The `-` symbol indicates the previous job (the one before the current job).
-
-- Other jobs do not have a symbol.
-
-- Running
-
-  - The job is actively running in the background.
-
-- Stopped
-
-  - The job has been paused (e.g., with Ctrl+Z).
-
-- Done
-
-  - The job has completed execution.
-
-- brings job [1] to the foreground.
-
-```shell
-fg %1
-```
-
-- resumes job [1] in the background.
-
-```shell
-bg %1
-```
-
-- kills job [1].
-
-```shell
-kill %1
-```
 
 - to beautify the `json` format
 
@@ -316,112 +208,6 @@ kill %1
   ```shell
   watch -n 0.5 your_command
   ```
-
-- set static ip
-
-  ```shell
-  sudo nmcli con mod <connection-name> ipv4.method manual ipv4.addresses 192.168.56.100/24 ipv4.gateway 192.168.56.1 ipv4.dns 8.8.8.8
-  ```
-
-- see network interfaces
-
-  ```shell
-  ip a
-  ```
-
-- see network connections
-
-  ```shell
-  nmcli con show
-  ```
-
-### systemd
-
-- start the service
-
-```shell
-systemctl start yourservice.service
-```
-
-- stop the service
-
-```shell
-systemctl stop yourservice.service
-```
-
-- restart the service
-
-```shell
-systemctl restart yourservice.service
-```
-
-- enable the service to run after boot
-
-```shell
-systemctl enable yourservice.service
-```
-
-- diable the service to run after boot
-
-```shell
-systemctl diable yourservice.service
-```
-
-### ssh
-
-- get a file from remote
-
-  ```shell
-  scp remoteuser@remotehostip:/path/to/file localdirectory
-  ```
-
-- get a folder complete from remote
-
-  ```shell
-  scp -r remoteuser@remotehostip:/path/to/directory localdirectory
-  ```
-
-- send a file to destination ip
-
-  ```shell
-  scp filepath remoteuser@remotehostip:/remote/to/directory
-  ```
-
-- send a folder to destination ip
-
-  ```shell
-  scp -r folderpath remoteuser@remotehostip:/remote/to/directory
-  ```
-
-- copy files with progress status
-
-  ```shell
-  rsync -ah --progress source destination
-  ```
-
-- sha2 hash of string
-
-  ```shell
-  echo -n "your text" | sha256sum
-  ```
-
-- send DHCP
-
-  ```shell
-  sudo dhclient -r
-  sudo dhclient
-  ```
-
-- change date
-
-  ```shell
-  date -s "date_output_like"
-  ```
-
-- while linux is up it should create a swap in size of your ram,
-  if it can't (for example for having full disk drive),
-  the system does not goes up, (if you can)decrease
-  the amount of ram for solving from problem temporary!
 
 ### Snap
 
