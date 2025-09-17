@@ -26,3 +26,9 @@ sudo iptables -t nat -F
 sudo iptables -t mangle -F
 sudo systemctl restart yourservice # like docker, postgresql, ...
 ```
+
+## Troubleshooting
+
+### `ping` okay, browser not okay!
+
+- probably you should fix dns
