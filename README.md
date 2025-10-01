@@ -331,6 +331,17 @@ sudo ntfs-3g /dev/sda2 .
   sudo dpkg -r <packagepath>
   ```
 
+### Ubuntu
+
+- problem with the screen stuck on login after sleep mode
+	- after starting your system and up you should
+	  restart the `mdm` or `lightdm` service
+
+		```sh
+		sudo service mdm restart # or
+		sudo service lightdm restart
+		```
+
 ### Mint
 
 - mint has has no default root password!, you should set for it
