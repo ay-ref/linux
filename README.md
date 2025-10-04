@@ -427,9 +427,13 @@ rpmrebuild your_app_name
 - sending data to server
 
   ```shell
-  nc -v localhost <port>
+  nc -v localhost <port> # tcp
   ```
 
+  ```shell
+  nc -u localhost <port> # udp
+  ```
+  
 ### unrar
 
 - extract `.rar` file
