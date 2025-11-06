@@ -46,6 +46,10 @@ rsync -avz -e ssh \
   whoami
   ```
 
+- in terminal you should care about case sensitive and also spaces
+	- sometimes you should use `"My File"` to input space correctly (for example: paths)
+    - sometimes use from encoding `My%20Uri` (for example: uri)
+
 - recommended to don't install snap on linux!
 
 - just try download the file from the internet.
