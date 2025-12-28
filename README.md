@@ -1,13 +1,5 @@
 # Linux
 
-```sh
-rsync -avz -e ssh \
-  --exclude='*.log' \
-  --exclude='temp/' \
-  user@remote:/var/www/html/ \
-  /backup/local_html/
-```
-
 ## General
 
 ### Shell
